@@ -1,13 +1,14 @@
-#Importar la liberria de notificacionde windows
+#For begginers like me
+#Remember to pip install win10toast first
 import win10toast
-#Importar la libreria del tiempo
+#Import datetime library
 import datetime 
-#Vamos a ver si arreglamos esto de pathing
+#Cant get the icon to show on windows
 
-filedir = "icono.ico" #Padre ayudame a identificar como es que se busca el pathing aqui
+filedir = "icono.ico" 
 toaster = win10toast.ToastNotifier()
 now = datetime.datetime.now()
 
-#Esta vaina jala la libreria y la ponte a mostrarse. Cuidado con los parentesis
+#This is in spanish, change it
 toaster.show_toast ("Son las",now.strftime("%I:%M %p"),
 icon_path=filedir,duration=60)
